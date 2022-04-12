@@ -23,13 +23,14 @@ public class StringPointer implements Serializable, CharSequence, Comparable<Str
 	protected final int length;
 	
 	private int hash = 0;
-	
+
+
 	public StringPointer(String str){
 		value = str.toCharArray();
 		offset = 0;
 		length = value.length;
 	}
-	
+
 	public StringPointer(char[] value, int offset, int length){
 		this.value = value;
 		this.offset = offset;
@@ -98,6 +99,9 @@ public class StringPointer implements Serializable, CharSequence, Comparable<Str
 			value[offset + i] = fillWith;
 		}
 	}
+/*
+打印位置和敏感词
+ */
 	public void backPosition(int begin , int end,int len ){
 		int endFlag=end;
 		int beginFlag=begin;
